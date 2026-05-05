@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reconhecimento de Imagem</title>
+    <meta name="description" content="Aplicação de reconhecimento de imagens em tempo real usando webcam e inteligência artificial.">
+    <meta name="keywords" content="reconhecimento de imagem, IA, webcam, machine learning, TensorFlow">
+    <meta name="author" content="MatheusW">
+    <title>Reconhecimento de Imagem - IA em Tempo Real</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -13,15 +16,43 @@
 </head>
 
 <body>
+    <header>
+        <h1>🤖 Reconhecimento de Imagem</h1>
+        <p>Inteligência Artificial em Tempo Real</p>
+    </header>
 
-<h1>🤖 Reconhecimento de Imagem</h1>
+    <main>
+        <section id="instructions">
+            <h2>Como Usar</h2>
+            <ol>
+                <li>Clique em "Iniciar Câmera" para ativar a webcam</li>
+                <li>Permita o acesso à câmera quando solicitado</li>
+                <li>Aponte a câmera para objetos a serem reconhecidos</li>
+                <li>Veja as probabilidades em tempo real</li>
+            </ol>
+        </section>
 
-<button id="start-btn">Iniciar Câmera</button>
+        <section id="controls">
+            <button id="start-btn" aria-label="Iniciar câmera para reconhecimento">Iniciar Câmera</button>
+            <button id="stop-btn" disabled aria-label="Parar câmera">Parar Câmera</button>
+        </section>
 
-<div id="webcam-container"></div>
-<div id="label-container"></div>
+        <div id="loading" class="hidden">
+            <p>Carregando modelo e inicializando câmera...</p>
+            <div class="spinner"></div>
+        </div>
 
-<script src="script.js"></script>
+        <div id="error-message" class="hidden" role="alert"></div>
 
+        <div id="webcam-container" aria-label="Vídeo da webcam"></div>
+
+        <div id="label-container" aria-label="Resultados do reconhecimento"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MatheusW - Projeto de Reconhecimento de Imagens</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
